@@ -74,6 +74,11 @@ const eth: NetworkUserConfig = {
   accounts: [process.env.KEY_ETH!],
 }
 
+const hardhat: NetworkUserConfig = {
+  chainId: 1337,
+  accounts: {mnemonic: 'test test test test test test test test test test test junk',},
+}
+
 export default {
   networks: {
     hardhat: {
@@ -83,6 +88,7 @@ export default {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_HARDHAT && { hardhat }),
     // mainnet: bscMainnet,
   },
   etherscan: {
