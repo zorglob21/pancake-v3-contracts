@@ -29,6 +29,7 @@ async function main() {
     pancakeV3PoolDeployer_address = pancakeV3PoolDeployer.address
     console.log('pancakeV3PoolDeployer', pancakeV3PoolDeployer_address)
   } else {
+    //console.log('addresse déjà enregistrée')
     pancakeV3PoolDeployer = new ethers.Contract(
       pancakeV3PoolDeployer_address,
       artifacts.PancakeV3PoolDeployer.abi,
